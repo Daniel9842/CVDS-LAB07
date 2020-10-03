@@ -1,36 +1,31 @@
-# RESUMEN LAB-05:
+# LAB-07:
 
-## Parte 1:
-Utilizamos mediante el comando telnet el uso del HOST, PORT y protocolos HTTP, haciendo conexiones.
+## Integrantes
+* Miguel Rodríguez
+* Daniel Ducuara
 
-## Parte 2:
-Empezamos creando un proyecto con archetype webApp, despues creamos la clase SampleServlet, se cambiaron dependencias y build para poder modificar la URL de nuestro proyecto.
-Despues de la modificación se compila y se ejecuta TomCat, creando despues una clase Todo en donde se encuentra los metodos GET y SET.
-Posteriormente se crea la clase Service para llamar a la clase Todo y agregar los datos de GET, creando despues la clase httpServlet y se sobrescribe el metodo doGet.
-Se modifica la URL para ser ingesada un Id y se realizan unas excepciones, para los parametros invalidos.
+## Sección I
 
-## Parte 3:
-Se utilizo un archivo HTML para generar un pagina donde se ingresa unos datos enteros y posteriormente efectuar mediante un archivo JavaScript un resultado a dicho valor, en donde se determinaba si este era una valos avalido o no.
-Posteriormente informandole al usuario su resultado.
+Empezamos clonando el proyecto  [MyBatis_Introduction_VideoRental](https://github.com/PDSW-ECI/MyBatis_Introduction_VideoRental)
+posteriormente descargamos el archivo [ JDBCExample.java](http://campusvirtual.escuelaing.edu.co/moodle/pluginfile.php/191340/mod_assign/intro/JDBCExample.java)
+y lo agregamos al paquete "edu.eci.cvds.sampleprj.jdbc.example".
 
-## Parte 4:
-Se utiliza algunos conceptos aprendidos en las partes anteriores y posteriormente crea un proyecto basado en PrimeFaces con diversos metodos para poder calcular moda, promedio, variación estandar y la reiniciacion de los datos.
+En la clase  JDBCExample debemos cambiar los parámetros de conexión a la base de datos.
+![](Captura1.PNG) 
+Por último debemos realizar las operaciones nombresProductosPedido, valorTotalPedido, registrarNuevoProducto y se verifica que la información 
+coincida con la almacenada en la base de datos.
 
+## Sección II
+### Parte I
+Se agregan los typeAliases en mybatis-config.xml, luego se debe configurar los mappers con el código aportado en el repositorio y configurarlos
+con sus respectivos atributos, debemos agregar cuatro resultMap en total, para la clase cliente, ItemRentado, Item, TipoItem y en MyBatisExample
+se consulta al cliente. 
+### Parte II
+Debemos configurar el XML en la operación consultarCliente(int id) en el mapper Cliente, y se debe verificar que funcione MyBatisExample, posteriormentese 
+se hace lo mismo con la operación agregarItemRentadoACliente. Por último configuramos en ItemMapper las operaciones consultarItem y consultarItems.
 
-# PREGUNTAS PARTE 3:
-## Punto 20: 
-### Historial
-GET = Los parametros permanecen en el historial.
-### Marcadores
-POST = No acepta marcadores.
-### Parametros
-GET =  No puede enviar parametros de tamaño limitado.
-### Hackeos
-POST = Es más dificil de hackear a comparación de GET.
-### Uso
-GET = No debe ser usado cuando se envían contraseñas de información sensible.
-### Visibilidad
-POST = Las variables no pueden visualizar en el URL.
+## Circle Ci
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://app.circleci.com/pipelines/github/Jose1102/Lab7)
 
-## Punto 21:
-
+## Codacy
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9106912acf4e42f38eef7f27eb0c8522)](https://app.codacy.com/gh/Jose1102/Lab7/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Jose1102/Lab7&amp;utm_campaign=Badge_Grade)

@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 # LAB-07:
-=======
+
 # CVDSLAB-07:
->>>>>>> 34b761d... lab07
 
 ## Integrantes
 * Miguel Rodríguez
